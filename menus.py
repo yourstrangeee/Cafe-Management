@@ -26,13 +26,14 @@ def main():
                 print(f"Your Order {order} Successfully Ordered. Total Bill so far: {price}")
             else:
                 print(f"{order} is not in menus. Please choose from the menu.")
-        
+        print("\n---- Receipt ----")
+        for item in order_items:
+            print(f"{item}: Rs {menus[item]}")
+        print(f"Total: Rs {price}")
         print(f"You have ordered {len(order_items)} item(s) in total.")
         print(f"Your Total Bill: {price}")
-        
         order2 = input("Do You want something else? (Y/N): ")
         if order2.upper() != "Y":
             break
 
 main()
-# cafe management by your strange dm [yxrs_strange] if you want to upgrade or want to suggest some ideas 
